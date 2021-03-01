@@ -10,7 +10,41 @@ const btnsOpenModal = document.querySelectorAll('.show-modal');
 
 console.log(btnsOpenModal);
 
+
+
+
+//close modalfunction for duplicate code
+const closeModal = function(){
+      //javscript enginen will run this function as soon as click event happens on this element
+     //do the opposite and add class this time 
+    modal.classList.add('hidden');
+    overlay.classList.add('hidden');
+};
+const openModal = function(){
+     //use the classlist property
+        //remove class hidden don't use dot just normal string dot is only for selector
+       modal.classList.remove('hidden');
+        //show overlay dark background buy removing hiddden(display none) class
+        //aggregate all properties in single class then manipulate class
+       overlay.classList.remove('hidden');
+    };
+
+
+
+//loop through the nodelist 
+//attach event handler to eah button
+
 for(let i = 0; i< btnsOpenModal.length; i++) {
-    console.log(btnsOpenModal[i].textConent);
-    
+    //attach event listener to all three ubbons in the loop
+    //define function open modal whenever click happens call function
+    btnsOpenModal[i].addEventListener('click', openModal);
 }
+
+
+ btnCloseModal.addEventListener('click', closeModal);
+//use function in click event, not calling function immediately
+//execute as soon as click event executes on cloase modal button
+
+
+//add eventlistener to overlay
+overlay.addEventListener('click', closeModal);
