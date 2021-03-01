@@ -10,9 +10,6 @@ const btnsOpenModal = document.querySelectorAll('.show-modal');
 
 console.log(btnsOpenModal);
 
-
-
-
 //close modalfunction for duplicate code
 const closeModal = function(){
       //javscript enginen will run this function as soon as click event happens on this element
