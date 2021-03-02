@@ -45,3 +45,26 @@ for(let i = 0; i< btnsOpenModal.length; i++) {
 
 //add eventlistener to overlay
 overlay.addEventListener('click', closeModal);
+
+
+//keypress events global events, listen whole document
+//key up 
+//key press
+//key down
+//key info will be stored in event object
+//everytime event happens javascript generates object
+//access information about event
+//javascript will call function with event object
+document.addEventListener('keydown', function(e){
+//    console.log('Key was pressed');
+//    console.log(e.key);
+    //check key property in event object
+    if(e.key === 'Escape') {
+        //check if modal  does not contain hidden class and close modal
+       if(!modal.classList.contains('hidden')) {
+           closeModal();
+           //call close modal function
+           
+       }
+    }
+});
